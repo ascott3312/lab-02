@@ -3,12 +3,12 @@
 ## Author
 - Drew Scott
 
-Number and name of feature: ________________________________
+Number and name of feature: Feature
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1.5
 
-Start time: _____
+Start time: 10:45
 
-Finish time: _____
+Finish time: 
 
 Actual time needed to complete: _____
