@@ -25,7 +25,7 @@ Creature.prototype.render = function () {
   let $template = $('.photo-template').clone();
   $template.removeClass('photo-template');
   $template.find('.title').text(this.getTitle);
-  $template.find('.creatureImage').attr('src', this.imageURL);
+  $template.find('.creatureImage').attr('src', this.imgURL);
   $template.find('.creatureImage').attr('alt', this.getTitle);
   $template.find('.description').text(this.getDescription);
   return $template;
