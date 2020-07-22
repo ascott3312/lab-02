@@ -33,7 +33,7 @@ Creature.prototype.render = function () {
 
 function renderCreature() {
   Creature.all.forEach(creature => {
-      $('#photo-gallery').append(creature.render());
+      $('#photo-gallary').append(creature.render());
   });
   $('.photo-template').remove();
 }
