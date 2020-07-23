@@ -22,28 +22,24 @@ function Creature(creature) {
 Creature.all = [];
 
 Creature.prototype.render = function () {
-  let $template = $('.photo-template').clone();
-  $template.removeClass('photo-template');
-  $template.find('.title').text(this.getTitle);
-  $template.find('.creatureImage').attr('src', this.imgURL);
-  $template.find('.creatureImage').attr('alt', this.getTitle);
-  $template.find('.description').text(this.getDescription);
-  return $template;
+  const templateHTML = $('#photo-template').html();
+  const renderedHTML = Mustache.render(templateHTML, this);
+  return renderedHTML;
 };
 
 function renderCreature() {
   Creature.all.forEach(creature => {
-      $('#photo-gallary').append(creature.render());
-  });
-  $('.photo-template').remove();
+    $('#photo-gallary').append(creature.render());
+    });
+    $('.photo-template').remove();
 }
 
 function fillKeywordDropdown(){
   var keywordList = document.getElementById('keyword-select')
   
-  for(var i = 0; i < Creature.length;i++){
+  for(var i = 0; i < all.length;i++){
     var keyword = document.createElement('option');
-    keyword.textContent = Creature[i].keyword;
+    keyword.textContent = all.[i].keyword;
     keywordList.appendChild(keyword);
   }
 }
