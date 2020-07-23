@@ -2,7 +2,7 @@
 
 $(() => {
   const ajaxSettings = { method: 'get', dataType: 'json' };
-  $.ajax('./data/page-1.json', ajaxSettings)
+  $.ajax('./datafiles/page-1.json', ajaxSettings)
     .then((data) => {
       const arrayOfCreatures = data;
       arrayOfCreatures.forEach((creature) => {
