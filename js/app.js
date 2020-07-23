@@ -33,7 +33,6 @@ function renderCreature() {
     });
     $('.photo-template').remove();
 }
-
 function fillKeywordDropdown(){
   var keywordList = document.getElementById('keyword-select')
   
