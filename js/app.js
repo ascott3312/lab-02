@@ -37,3 +37,14 @@ function renderCreature() {
   });
   $('.photo-template').remove();
 }
+
+function fillKeywordDropdown(){
+  var keywordList = document.getElementById('keyword-select')
+  
+  for(var i = 0; i < Creature.length;i++){
+    var keyword = document.createElement('option');
+    keyword.textContent = Creature[i].keyword;
+    keywordList.appendChild(keyword);
+  }
+}
+fillKeywordDropdown();
