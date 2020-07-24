@@ -1,6 +1,7 @@
 'use strict';
 
 $(() => {
+  $('#photo-gallery').hide();
   const ajaxSettings = { method: 'get', dataType: 'json' };
   $.ajax('./datafiles/page-1.json', ajaxSettings)
     .then((data) => {
@@ -11,6 +12,8 @@ $(() => {
     })
     .then(() => { 
       renderCreature();
+      $('.spinner').fadeOut();
+      $('#photo-gallery').fadeIn();
       fillKeywordDropdown();
     });
 });
