@@ -23,6 +23,10 @@ body {
   background: teal;
   margin: 0 auto;
   max-width: 928px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #photo-gallery:after {
   content: "";
@@ -59,6 +63,11 @@ footer {
 #filter-sort-search {
   text-align: center;
   padding-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 }	
 #filter-sort-search section {
   text-align: center;
