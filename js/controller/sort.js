@@ -1,4 +1,4 @@
-	'use strict';
+'use strict';
  
 function handleSort() {
   $('#sort-by').on('change', function () {
@@ -15,9 +15,10 @@ function handleSort() {
     else if (sortBy === 'age-rev') {
       sortReverseNumerical($('.person'));
     }
-    showPeople(1);
-  });
-} 
+  //   showPeople(1);
+  // });
+}
+}
 function sortAlphabetical() {
   $('.person').sort((a, b) => {
     let result;
@@ -39,8 +40,7 @@ function sortAlphabetical() {
       }
     }
     return result;
-  }).appendTo('#photo-gallery');
-} 
+}};
 function sortReverseAlphabetical() {
   $('.person').sort((a, b) => {
     let result;
@@ -62,8 +62,7 @@ function sortReverseAlphabetical() {
       }
     }
     return result;
-  }).appendTo('#photo-gallery');
-}
+}};
 function sortNumerical(arr) {
   $('.person').sort((a, b) => {
     return ($(b).data('age')) < ($(a).data('age')) ? 1 : -1;
