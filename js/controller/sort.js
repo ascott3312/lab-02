@@ -9,10 +9,10 @@ function handleSort() {
     else if (sortBy === 'alpha-rev') {
       sortReverseAlphabetical();
     }
-    else if (sortBy === 'age') {
+    else if (sortBy === 'horns') {
       sortNumerical($('.person'));
     }
-    else if (sortBy === 'age-rev') {
+    else if (sortBy === 'horns-rev') {
       sortReverseNumerical($('.person'));
     }
   //   showPeople(1);
@@ -20,19 +20,19 @@ function handleSort() {
 }
 }
 function sortAlphabetical() {
-  $('.person').sort((a, b) => {
+  $('#sort-by').sort((a, b) => {
     let result;
-    if (($(b).data('lastname').toLowerCase()) < ($(a).data('lastname').toLowerCase())) {
+    if (($(b).data('title').toLowerCase()) < ($(a).data('title').toLowerCase())) {
       result = 1;
     }
-    else if (($(b).data('lastname').toLowerCase()) > ($(a).data('lastname').toLowerCase())) {
+    else if (($(b).data('title').toLowerCase()) > ($(a).data('title').toLowerCase())) {
       result = -1;
     }
     else {
-      if (($(b).data('firstname').toLowerCase()) < ($(a).data('firstname').toLowerCase())) {
+      if (($(b).data('title').toLowerCase()) < ($(a).data('title').toLowerCase())) {
         result = 1;
       }
-      else if (($(b).data('firstname').toLowerCase()) > ($(a).data('firstname').toLowerCase())) {
+      else if (($(b).data('title').toLowerCase()) > ($(a).data('title').toLowerCase())) {
         result = -1;
       }
       else {
@@ -42,19 +42,19 @@ function sortAlphabetical() {
     return result;
 }};
 function sortReverseAlphabetical() {
-  $('.person').sort((a, b) => {
+  $('#sort-by').sort((a, b) => {
     let result;
-    if (($(b).data('lastname').toLowerCase()) < ($(a).data('lastname').toLowerCase())) {
+    if (($(b).data('title').toLowerCase()) < ($(a).data('title').toLowerCase())) {
       result = -1;
     }
-    else if (($(b).data('lastname').toLowerCase()) > ($(a).data('lastname').toLowerCase())) {
+    else if (($(b).data('title').toLowerCase()) > ($(a).data('title').toLowerCase())) {
       result = 1;
     }
     else {
-      if (($(b).data('firstname').toLowerCase()) < ($(a).data('firstname').toLowerCase())) {
+      if (($(b).data('keyword').toLowerCase()) < ($(a).data('keyword').toLowerCase())) {
         result = -1;
       }
-      else if (($(b).data('firstname').toLowerCase()) > ($(a).data('firstname').toLowerCase())) {
+      else if (($(b).data('keywprd').toLowerCase()) > ($(a).data('keyword').toLowerCase())) {
         result = 1;
       }
       else {
@@ -64,12 +64,12 @@ function sortReverseAlphabetical() {
     return result;
 }};
 function sortNumerical(arr) {
-  $('.person').sort((a, b) => {
-    return ($(b).data('age')) < ($(a).data('age')) ? 1 : -1;
+  $('#sort-by').sort((a, b) => {
+    return ($(b).data('horns')) < ($(a).data('horns')) ? 1 : -1;
   }).appendTo('#photo-gallery');
 }	
 function sortReverseNumerical(arr) {
-  $('.person').sort((a, b) => {
-    return ($(b).data('age')) > ($(a).data('age')) ? 1 : -1;
+  $('#sort-by').sort((a, b) => {
+    return ($(b).data('horns')) > ($(a).data('horns')) ? 1 : -1;
   }).appendTo('#photo-gallery');
 }
